@@ -4,6 +4,14 @@
     <ProjectReference Include="..\..\..\Shared\Confab.Shared.Infrastructure\Confab.Shared.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Services\" />
+    <Folder Include="DTO\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Policies\" />
+  </ItemGroup>
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
