@@ -53,7 +53,6 @@ namespace Confab.Modules.Conferences.Core.Services
                 HostName = conference.Host.Name,
                 From = conference.From,
                 To = conference.To,
-                Description = conference.Description,
                 Location = conference.Location,
                 LogoUrl = conference.LogoUrl,
                 Name = conference.Name,

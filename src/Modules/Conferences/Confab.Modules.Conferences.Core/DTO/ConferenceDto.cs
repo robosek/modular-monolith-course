@@ -11,7 +11,6 @@ namespace Confab.Modules.Conferences.Core.DTO
         [StringLength(100, MinimumLength = 3)]
         public string Name { get; set; }
         public string HostName { get; set; }
-        public string Description { get; set; }
         public string Location { get; set; }
         public string LogoUrl { get; set; }
         public int? ParticipantsLimit { get; set; }
