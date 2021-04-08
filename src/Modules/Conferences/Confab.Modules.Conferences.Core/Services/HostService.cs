@@ -46,7 +46,7 @@ namespace Confab.Modules.Conferences.Core.Services
         {
             var host = await _hostRepository.GetAsync(id);
             var dto = Map<HostDetailsDto>(host);
-            dto.Conferences = host.Conferences.Select(conference => new ConferenceDto()
+            dto.Conferences = host.Conferences?.Select(conference => new ConferenceDto()
             {
                 Id = conference.Id,
                 HostId = conference.HostId,
@@ -58,7 +58,7 @@ namespace Confab.Modules.Conferences.Core.Services
                 Name = conference.Name,
                 ParticipantsLimit = conference.ParticipantsLimit,
                 
-            }).ToList();
+            }).ToList() ?? new();
 
             return dto;
            

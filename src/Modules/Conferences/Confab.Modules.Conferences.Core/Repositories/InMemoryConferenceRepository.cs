@@ -1,35 +1,41 @@
-﻿using System;
+﻿using Confab.Modules.Conferences.Core.Entities;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using Confab.Modules.Conferences.Core.Entities;
 
 namespace Confab.Modules.Conferences.Core.Repositories
 {
     internal class InMemoryConferenceRepository : IConferenceRepository
     {
-        public Task AddAsync(Conference host)
+        private readonly List<Conference> _conferences = new();
+
+        public Task AddAsync(Conference conference)
         {
-            throw new NotImplementedException();
+            _conferences.Add(conference);
+
+            return Task.CompletedTask;
         }
 
-        public Task<IReadOnlyList<Conference>> BrowseAsync()
+        public async Task<IReadOnlyList<Conference>> BrowseAsync()
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
+
+            return _conferences;
         }
 
-        public Task DeleteAsync(Conference host)
+        public Task DeleteAsync(Conference conference)
         {
-            throw new NotImplementedException();
+            _conferences.Remove(conference);
+
+            return Task.CompletedTask;
         }
 
-        public Task<Conference> GetAsync(Guid id)
-        {
-            throw new NotImplementedException();
-        }
+        public Task<Conference> GetAsync(Guid id) => Task.FromResult(_conferences.SingleOrDefault(x => x.Id == id));
 
-        public Task UpdateAsync(Conference host)
+        public Task UpdateAsync(Conference conference)
         {
-            throw new NotImplementedException();
+            return Task.CompletedTask;
         }
     }
 }

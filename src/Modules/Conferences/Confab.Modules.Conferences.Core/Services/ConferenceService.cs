@@ -114,7 +114,7 @@ namespace Confab.Modules.Conferences.Core.Services
                 Id = conference.Id,
                 HostId = conference.HostId,
                 Name = conference.Name,
-                HostName = conference.Host.Name,
+                HostName = conference.Host?.Name,
                 Location = conference.Location,
                 LogoUrl = conference.LogoUrl,
                 ParticipantsLimit = conference.ParticipantsLimit,

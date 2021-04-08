@@ -9,16 +9,17 @@ namespace Confab.Modules.Conferences.Api.Controllers
 
     namespace Confab.Modules.Conferences.Api.Controllers
     {
-        internal class HostController : BaseController
+        internal class HostsController : BaseController
         {
             private readonly IHostService _hostService;
 
-            public HostController(IHostService hostService)
+            public HostsController(IHostService hostService)
             {
                 _hostService = hostService;
             }
 
             [HttpGet("{id:guid}")]
+            [ActionName("GetAsync")]
             public async Task<ActionResult<HostDetailsDto>> GetAsync(Guid id) =>
                  OkOrNotFound(await _hostService.GetAsync(id));
 
@@ -28,9 +29,9 @@ namespace Confab.Modules.Conferences.Api.Controllers
 
             [HttpPost]
             public async Task<ActionResult> AddAsync(HostDto dto)
-            {
+             {
                 await _hostService.AddAsync(dto);
-                return CreatedAtAction(nameof(GetAsync), new { id = dto.Id }, null);
+                return CreatedAtAction(nameof(this.GetAsync), new { id = dto.Id }, null);
             }
 
             [HttpPut("{id:guid}")]
@@ -51,8 +52,6 @@ namespace Confab.Modules.Conferences.Api.Controllers
                 return NoContent();
             }
         }
-
-
     }
 
 }
