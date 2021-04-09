@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
     <ProjectReference Include="..\Confab.Shared.Abstractions\Confab.Shared.Abstractions.csproj" />
@@ -13,6 +13,7 @@
       <Folder Include="Services\" />
     </ItemGroup>
     <ItemGroup>
+      <PackageReference Include="Humanizer" Version="2.8.26" />
       <PackageReference Include="MappingGenerator" Version="1.22.3" />
     </ItemGroup>
   <PropertyGroup>
