@@ -9,12 +9,12 @@ namespace Confab.Shared.Infrastructure.Exceptions
 {
     internal class ErrorHandlerMiddleware : IMiddleware
     {
-        private readonly IExceptionToResponseMapper responseMapper;
+        private readonly IExceptionCompositionRoot exceptionCompositionRoot;
         private readonly ILogger<ErrorHandlerMiddleware> logger;
 
-        public ErrorHandlerMiddleware(IExceptionToResponseMapper responseMapper, ILogger<ErrorHandlerMiddleware> logger)
+        public ErrorHandlerMiddleware(IExceptionCompositionRoot exceptionCompositionRoot, ILogger<ErrorHandlerMiddleware> logger)
         {
-            this.responseMapper = responseMapper;
+            this.exceptionCompositionRoot = exceptionCompositionRoot;
             this.logger = logger;
         }
 
@@ -28,12 +28,12 @@ namespace Confab.Shared.Infrastructure.Exceptions
             {
                 logger.LogError(exception, exception.Message);
                 await HandleErrorAsync(context, exception);
-            }
+            } 
         }
 
         private async Task HandleErrorAsync(HttpContext context, Exception exception)
         {
-            var errorResponse = responseMapper.Map(exception);
+            var errorResponse = exceptionCompositionRoot.Map(exception);
             context.Response.StatusCode = (int) (errorResponse?.StatusCode ?? HttpStatusCode.BadRequest);
             var response = errorResponse.Response;
 

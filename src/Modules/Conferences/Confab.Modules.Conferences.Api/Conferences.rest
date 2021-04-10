@@ -1,5 +1,5 @@
 @url = http://localhost:5000/conferences-module
-@hostId = e0207149-021f-42f6-9929-bb2b442af6bd
+@hostId = a07e4d67-988b-48b0-b075-e9bfff04cdec
 @conferenceId = c20dfbe1-085a-45d1-97c1-32c4246b1c70
 @accessToken = secret
 
