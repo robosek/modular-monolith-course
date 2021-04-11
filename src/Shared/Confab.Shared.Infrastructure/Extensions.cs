@@ -32,14 +32,7 @@ namespace Confab.Shared.Infrastructure
         {
             app.UseErrorHandler();
             app.UseRouting();
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Confab!");
-                });
-            });
+            
 
             return app;
         }
