@@ -23,7 +23,7 @@ namespace Confab.Bootstrapper
         public Startup(IConfiguration configuration)
         {
             this.configuration = configuration;
-            _assemblies = ModuleLoader.LoadAssemblies();
+            _assemblies = ModuleLoader.LoadAssemblies(configuration );
             _modules = ModuleLoader.LoadModules(_assemblies);
         }
 
@@ -40,7 +40,7 @@ namespace Confab.Bootstrapper
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
 
-            app.UseInfrastructure();
+            app.UseInfrastructure();   
             foreach(var module in _modules)
             {
                 module.Use(app);

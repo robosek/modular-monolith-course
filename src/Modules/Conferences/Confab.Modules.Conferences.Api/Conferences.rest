@@ -12,7 +12,7 @@ POST {{url}}/hosts
 Content-Type: application/json
 
 {
-  "name": "Host #1",
+  "name": "Host #2",
   "description": "Lorem ipsum"
 }
 
