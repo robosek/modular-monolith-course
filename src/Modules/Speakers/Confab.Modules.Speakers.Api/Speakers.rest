@@ -1,0 +1,37 @@
+@url = http://localhost:5000/speakers-module
+@speakerId = ac56c25d-c77c-412a-9a68-54b1b3fe2249
+@accessToken = secret
+
+###
+POST {{url}}/speakers
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "email": "robosek@robosek.robosek",
+  "fullName": "Robert Sęk",
+  "bio": "Developer, DevOps",
+  "avatarUrl": "https://avatars.pl/super-avatar.jpg"
+}
+
+###
+GET {{url}}/speakers
+
+###
+GET {{url}}/speakers/{{speakerId}}
+
+###
+PUT {{url}}/speakers/{{speakerId}}
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+ "email": "robosek@robosek.robosek",
+  "fullName": "Robert Sęk",
+  "bio": "Developer, DevOps, Consultant",
+  "avatarUrl": "https://avatars.pl/super-avatar.jpg"
+}
+
+###
+DELETE {{url}}/speakers/{{speakerId}}
+Authorization: Bearer {{accessToken}}

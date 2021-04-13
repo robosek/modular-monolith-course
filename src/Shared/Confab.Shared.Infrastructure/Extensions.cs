@@ -58,6 +58,7 @@ namespace Confab.Shared.Infrastructure
                     manager.FeatureProviders.Add(new InternalControllerFeatureProvider());
 
                 });
+
             services.AddPostgres(configuration);
             return services;
         }

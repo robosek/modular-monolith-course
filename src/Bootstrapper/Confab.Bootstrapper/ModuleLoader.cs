@@ -19,7 +19,6 @@ namespace Confab.Bootstrapper
                 .Where(x => !locations.Contains(x, StringComparer.InvariantCultureIgnoreCase))
                 .ToList();
 
-
             var disabledModules = new List<string>();
 
             foreach(var file in files)
@@ -58,6 +57,6 @@ namespace Confab.Bootstrapper
                         .Cast<IModule>()
                         .ToList();
 
-}
+    }
     
 }
