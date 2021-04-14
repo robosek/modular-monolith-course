@@ -1,21 +1,22 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Confab.Modules.Conferences.Core;
+using Confab.Modules.Users.Core;
 using Confab.Shared.Abstractions.Modules;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: InternalsVisibleTo("Confab.Bootstrapper")]
-namespace Confab.Modules.Speakers.Api
+namespace Confab.Modules.Users.Api
 {
-    internal class SpeakersModule : IModule
+    internal class UsersModule : IModule
     {
-        public const string BasePath = "speakers-module";
-        public string Name => "Speakers";
+        public const string BasePath = "users-module";
+        public string Name { get; } = "Users";
         public string Path => BasePath;
 
-        public IEnumerable<string> Policies { get; } = new[] { "speakers" };
+        public IEnumerable<string> Policies { get; } = new[]
+        {
+            "users"
+        };
 
         public void Register(IServiceCollection serviceCollection, IConfiguration configuration = null)
         {
@@ -24,7 +25,6 @@ namespace Confab.Modules.Speakers.Api
 
         public void Use(IApplicationBuilder app)
         {
-           
         }
     }
 }

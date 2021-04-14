@@ -15,5 +15,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Modules\" />
+    <Folder Include="Auth\" />
+    <Folder Include="Contexts\" />
   </ItemGroup>
 </Project>

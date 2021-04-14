@@ -5,6 +5,8 @@ using System.Runtime.CompilerServices;
 using Confab.Shared.Abstractions;
 using Confab.Shared.Abstractions.Modules;
 using Confab.Shared.Infrastructure.Api;
+using Confab.Shared.Infrastructure.Auth;
+using Confab.Shared.Infrastructure.Contexts;
 using Confab.Shared.Infrastructure.Exceptions;
 using Confab.Shared.Infrastructure.Postgres;
 using Confab.Shared.Infrastructure.Services;
@@ -19,7 +21,8 @@ namespace Confab.Shared.Infrastructure
 {
     internal static class Extensions
     {
-        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration,
+            IList<Assembly> assemblies, IList<IModule> modules)
         {
             var disabledModules = new List<string>();
             foreach(var(key,value) in configuration.AsEnumerable())
@@ -35,6 +38,10 @@ namespace Confab.Shared.Infrastructure
                 }
             }
 
+            services.AddAuth(modules, configuration);
+            services.AddSingleton<IContextFactory, ContextFactory>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddTransient(sp => sp.GetRequiredService<IContextFactory>().Create());
             services.AddErrorHandler();
             services.AddSingleton<IClock, UtcClock>();
             services.AddHostedService<AppInitializer>();
@@ -65,9 +72,10 @@ namespace Confab.Shared.Infrastructure
 
         public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder app)
         {
+            app.UseAuthentication();
             app.UseErrorHandler();
             app.UseRouting();
-            
+            app.UseAuthorization();
 
             return app;
         }
