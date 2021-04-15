@@ -3,6 +3,7 @@ using System.Linq;
 using System.Reflection;
 using Confab.Shared.Abstractions.Modules;
 using Confab.Shared.Infrastructure;
+using Confab.Shared.Infrastructure.Modules;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -52,7 +53,11 @@ namespace Confab.Bootstrapper
                 {
                     await context.Response.WriteAsync("Confab!");
                 });
+
+                endpoints.MapModuleInfo();
             });
+
+
 
             _assemblies.Clear();
             _modules.Clear();

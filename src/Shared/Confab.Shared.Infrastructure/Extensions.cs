@@ -8,6 +8,7 @@ using Confab.Shared.Infrastructure.Api;
 using Confab.Shared.Infrastructure.Auth;
 using Confab.Shared.Infrastructure.Contexts;
 using Confab.Shared.Infrastructure.Exceptions;
+using Confab.Shared.Infrastructure.Modules;
 using Confab.Shared.Infrastructure.Postgres;
 using Confab.Shared.Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
@@ -21,6 +22,8 @@ namespace Confab.Shared.Infrastructure
 {
     internal static class Extensions
     {
+        private const string CorsPolicy = "cors";
+
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration,
             IList<Assembly> assemblies, IList<IModule> modules)
         {
@@ -38,7 +41,26 @@ namespace Confab.Shared.Infrastructure
                 }
             }
 
+            services.AddCors(cors =>
+            {
+                cors.AddPolicy(CorsPolicy, x =>
+                {
+                    x.WithOrigins("*")
+                        .WithMethods("POST", "PUT", "DELETE")
+                        .WithHeaders("Content-Type", "Authorization");
+                });
+            });
+            services.AddSwaggerGen(swagger =>
+            {
+                swagger.CustomSchemaIds(x => x.FullName);
+                swagger.SwaggerDoc("v1", new()
+                {
+                    Title = "Confab API",
+                    Version = "v1"
+                });
+            });
             services.AddAuth(modules, configuration);
+            services.AddModuleInfo(modules);
             services.AddSingleton<IContextFactory, ContextFactory>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient(sp => sp.GetRequiredService<IContextFactory>().Create());
@@ -72,8 +94,16 @@ namespace Confab.Shared.Infrastructure
 
         public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder app)
         {
+            app.UseCors(CorsPolicy );
             app.UseAuthentication();
             app.UseErrorHandler();
+            app.UseSwagger();
+            app.UseReDoc(reDoc =>
+            {
+                reDoc.RoutePrefix = "docs";
+                reDoc.SpecUrl = "/swagger/v1/swagger.json";
+                reDoc.DocumentTitle = "Confab API";
+            });
             app.UseRouting();
             app.UseAuthorization();
 
