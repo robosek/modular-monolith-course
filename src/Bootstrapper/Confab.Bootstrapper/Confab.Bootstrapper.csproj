@@ -9,6 +9,9 @@
     <ProjectReference Include="..\..\Modules\Users\Confab.Modules.Users.Api\Confab.Modules.Users.Api.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\..\Modules\Tickets\Confab.Modules.Tickets.Api\Confab.Modules.Tickets.Api.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>

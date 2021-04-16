@@ -14,6 +14,7 @@
     <Folder Include="DAL\" />
     <Folder Include="DAL\Configurations\" />
     <Folder Include="DAL\Repositories\" />
+    <Folder Include="Events\" />
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
