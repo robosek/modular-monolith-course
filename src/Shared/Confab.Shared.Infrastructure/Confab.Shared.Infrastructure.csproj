@@ -12,6 +12,9 @@
       <Folder Include="Auth\" />
       <Folder Include="Contexts\" />
       <Folder Include="Events\" />
+      <Folder Include="Messaging\" />
+      <Folder Include="Messaging\Brokers\" />
+      <Folder Include="Messaging\Dispatchers\" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Humanizer" Version="2.8.26" />
