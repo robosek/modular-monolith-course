@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.6.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Bootstrapper", "src\Bootstrapper\Confab.Bootstrapper\Confab.Bootstrapper.csproj", "{5176D4D8-AE99-4F35-80CC-09875957EB2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confab.Bootstrapper", "src\Bootstrapper\Confab.Bootstrapper\Confab.Bootstrapper.csproj", "{5176D4D8-AE99-4F35-80CC-09875957EB2A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FBAA4B30-949D-11EB-B3DB-171EEE6096F6}"
 EndProject
@@ -15,33 +15,43 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{6D59FE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{728207C0-949E-11EB-B3DB-171EEE6096F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Shared.Abstractions", "src\Shared\Confab.Shared.Abstractions\Confab.Shared.Abstractions.csproj", "{BD39D2A4-2383-4FB8-B606-86714D061CE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confab.Shared.Abstractions", "src\Shared\Confab.Shared.Abstractions\Confab.Shared.Abstractions.csproj", "{BD39D2A4-2383-4FB8-B606-86714D061CE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Shared.Infrastructure", "src\Shared\Confab.Shared.Infrastructure\Confab.Shared.Infrastructure.csproj", "{85D5802E-E0F5-4634-B298-0CA4BD5DA709}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confab.Shared.Infrastructure", "src\Shared\Confab.Shared.Infrastructure\Confab.Shared.Infrastructure.csproj", "{85D5802E-E0F5-4634-B298-0CA4BD5DA709}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conferences", "Conferences", "{7967E5B0-94AC-11EB-A7E4-3D6F3B65F12C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Modules.Conferences.Api", "src\Modules\Conferences\Confab.Modules.Conferences.Api\Confab.Modules.Conferences.Api.csproj", "{86065E93-6C4B-4F38-A0CA-2A26583CAAEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confab.Modules.Conferences.Api", "src\Modules\Conferences\Confab.Modules.Conferences.Api\Confab.Modules.Conferences.Api.csproj", "{86065E93-6C4B-4F38-A0CA-2A26583CAAEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Modules.Conferences.Core", "src\Modules\Conferences\Confab.Modules.Conferences.Core\Confab.Modules.Conferences.Core.csproj", "{92743111-659D-406F-AAA3-B2E13C861D5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confab.Modules.Conferences.Core", "src\Modules\Conferences\Confab.Modules.Conferences.Core\Confab.Modules.Conferences.Core.csproj", "{92743111-659D-406F-AAA3-B2E13C861D5C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Speakers", "Speakers", "{0C0ABAA0-D703-4DC8-AA97-D23C56991AF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Modules.Speakers.Api", "src\Modules\Speakers\Confab.Modules.Speakers.Api\Confab.Modules.Speakers.Api.csproj", "{7B868B09-8AC4-4F77-B2D5-C812F036E4EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confab.Modules.Speakers.Api", "src\Modules\Speakers\Confab.Modules.Speakers.Api\Confab.Modules.Speakers.Api.csproj", "{7B868B09-8AC4-4F77-B2D5-C812F036E4EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Modules.Speakers.Core", "src\Modules\Speakers\Confab.Modules.Speakers.Core\Confab.Modules.Speakers.Core.csproj", "{057E875B-1205-4E59-9541-60D8EC46563F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confab.Modules.Speakers.Core", "src\Modules\Speakers\Confab.Modules.Speakers.Core\Confab.Modules.Speakers.Core.csproj", "{057E875B-1205-4E59-9541-60D8EC46563F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{D5988BF8-1828-4AE7-AB4B-7E7B34A1E698}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Modules.Users.Api", "src\Modules\Users\Confab.Modules.Users.Api\Confab.Modules.Users.Api.csproj", "{DD893BC0-AC0C-4D19-8332-3DABB9E7BC7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confab.Modules.Users.Api", "src\Modules\Users\Confab.Modules.Users.Api\Confab.Modules.Users.Api.csproj", "{DD893BC0-AC0C-4D19-8332-3DABB9E7BC7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Modules.Users.Core", "src\Modules\Users\Confab.Modules.Users.Core\Confab.Modules.Users.Core.csproj", "{4944436C-F953-49EF-B51B-B905C1E3F518}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confab.Modules.Users.Core", "src\Modules\Users\Confab.Modules.Users.Core\Confab.Modules.Users.Core.csproj", "{4944436C-F953-49EF-B51B-B905C1E3F518}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tickets", "Tickets", "{B894ABE6-19D8-4C80-9FD8-9A1A562A6D30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Modules.Tickets.Api", "src\Modules\Tickets\Confab.Modules.Tickets.Api\Confab.Modules.Tickets.Api.csproj", "{FC22DB78-96C7-4B54-82DB-0AC0E4A038CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confab.Modules.Tickets.Api", "src\Modules\Tickets\Confab.Modules.Tickets.Api\Confab.Modules.Tickets.Api.csproj", "{FC22DB78-96C7-4B54-82DB-0AC0E4A038CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Modules.Tickets.Core", "src\Modules\Tickets\Confab.Modules.Tickets.Core\Confab.Modules.Tickets.Core.csproj", "{F23B5B04-2D68-4BC5-A5D3-ABCF29D865E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confab.Modules.Tickets.Core", "src\Modules\Tickets\Confab.Modules.Tickets.Core\Confab.Modules.Tickets.Core.csproj", "{F23B5B04-2D68-4BC5-A5D3-ABCF29D865E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Agendas", "Agendas", "{891AC844-7464-43F3-AD0B-454900C89E09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Modules.Agendas.Api", "src\Modules\Agendas\Confab.Modules.Agendas.Api\Confab.Modules.Agendas.Api.csproj", "{364FAF38-298F-44D6-BD1D-D6AA2291A670}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Modules.Agendas.Application", "src\Modules\Agendas\Confab.Modules.Agendas.Application\Confab.Modules.Agendas.Application.csproj", "{143FA774-FFF1-4B27-B989-6A821015BC6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Modules.Agendas.Infrastructure", "src\Modules\Agendas\Confab.Modules.Agendas.Infrastructure\Confab.Modules.Agendas.Infrastructure.csproj", "{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confab.Modules.Agendas.Domain", "src\Modules\Agendas\Confab.Modules.Agendas.Domain\Confab.Modules.Agendas.Domain.csproj", "{7F2362C5-31AB-4865-BB37-D42C1B1F1987}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,9 +61,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5176D4D8-AE99-4F35-80CC-09875957EB2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -188,17 +195,68 @@ Global
 		{F23B5B04-2D68-4BC5-A5D3-ABCF29D865E0}.Release|x64.Build.0 = Release|Any CPU
 		{F23B5B04-2D68-4BC5-A5D3-ABCF29D865E0}.Release|x86.ActiveCfg = Release|Any CPU
 		{F23B5B04-2D68-4BC5-A5D3-ABCF29D865E0}.Release|x86.Build.0 = Release|Any CPU
+		{364FAF38-298F-44D6-BD1D-D6AA2291A670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{364FAF38-298F-44D6-BD1D-D6AA2291A670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{364FAF38-298F-44D6-BD1D-D6AA2291A670}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{364FAF38-298F-44D6-BD1D-D6AA2291A670}.Debug|x64.Build.0 = Debug|Any CPU
+		{364FAF38-298F-44D6-BD1D-D6AA2291A670}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{364FAF38-298F-44D6-BD1D-D6AA2291A670}.Debug|x86.Build.0 = Debug|Any CPU
+		{364FAF38-298F-44D6-BD1D-D6AA2291A670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{364FAF38-298F-44D6-BD1D-D6AA2291A670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{364FAF38-298F-44D6-BD1D-D6AA2291A670}.Release|x64.ActiveCfg = Release|Any CPU
+		{364FAF38-298F-44D6-BD1D-D6AA2291A670}.Release|x64.Build.0 = Release|Any CPU
+		{364FAF38-298F-44D6-BD1D-D6AA2291A670}.Release|x86.ActiveCfg = Release|Any CPU
+		{364FAF38-298F-44D6-BD1D-D6AA2291A670}.Release|x86.Build.0 = Release|Any CPU
+		{143FA774-FFF1-4B27-B989-6A821015BC6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{143FA774-FFF1-4B27-B989-6A821015BC6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{143FA774-FFF1-4B27-B989-6A821015BC6E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{143FA774-FFF1-4B27-B989-6A821015BC6E}.Debug|x64.Build.0 = Debug|Any CPU
+		{143FA774-FFF1-4B27-B989-6A821015BC6E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{143FA774-FFF1-4B27-B989-6A821015BC6E}.Debug|x86.Build.0 = Debug|Any CPU
+		{143FA774-FFF1-4B27-B989-6A821015BC6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{143FA774-FFF1-4B27-B989-6A821015BC6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{143FA774-FFF1-4B27-B989-6A821015BC6E}.Release|x64.ActiveCfg = Release|Any CPU
+		{143FA774-FFF1-4B27-B989-6A821015BC6E}.Release|x64.Build.0 = Release|Any CPU
+		{143FA774-FFF1-4B27-B989-6A821015BC6E}.Release|x86.ActiveCfg = Release|Any CPU
+		{143FA774-FFF1-4B27-B989-6A821015BC6E}.Release|x86.Build.0 = Release|Any CPU
+		{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52}.Debug|x64.Build.0 = Debug|Any CPU
+		{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52}.Debug|x86.Build.0 = Debug|Any CPU
+		{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52}.Release|x64.ActiveCfg = Release|Any CPU
+		{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52}.Release|x64.Build.0 = Release|Any CPU
+		{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52}.Release|x86.ActiveCfg = Release|Any CPU
+		{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52}.Release|x86.Build.0 = Release|Any CPU
+		{7F2362C5-31AB-4865-BB37-D42C1B1F1987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F2362C5-31AB-4865-BB37-D42C1B1F1987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F2362C5-31AB-4865-BB37-D42C1B1F1987}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7F2362C5-31AB-4865-BB37-D42C1B1F1987}.Debug|x64.Build.0 = Debug|Any CPU
+		{7F2362C5-31AB-4865-BB37-D42C1B1F1987}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7F2362C5-31AB-4865-BB37-D42C1B1F1987}.Debug|x86.Build.0 = Debug|Any CPU
+		{7F2362C5-31AB-4865-BB37-D42C1B1F1987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F2362C5-31AB-4865-BB37-D42C1B1F1987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F2362C5-31AB-4865-BB37-D42C1B1F1987}.Release|x64.ActiveCfg = Release|Any CPU
+		{7F2362C5-31AB-4865-BB37-D42C1B1F1987}.Release|x64.Build.0 = Release|Any CPU
+		{7F2362C5-31AB-4865-BB37-D42C1B1F1987}.Release|x86.ActiveCfg = Release|Any CPU
+		{7F2362C5-31AB-4865-BB37-D42C1B1F1987}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{92743111-659D-406F-AAA3-B2E13C861D5C} = {7967E5B0-94AC-11EB-A7E4-3D6F3B65F12C}
-		{86065E93-6C4B-4F38-A0CA-2A26583CAAEB} = {7967E5B0-94AC-11EB-A7E4-3D6F3B65F12C}
-		{7967E5B0-94AC-11EB-A7E4-3D6F3B65F12C} = {68F3BDC0-949E-11EB-B3DB-171EEE6096F6}
-		{85D5802E-E0F5-4634-B298-0CA4BD5DA709} = {6D59FE10-949E-11EB-B3DB-171EEE6096F6}
-		{BD39D2A4-2383-4FB8-B606-86714D061CE1} = {6D59FE10-949E-11EB-B3DB-171EEE6096F6}
-		{6D59FE10-949E-11EB-B3DB-171EEE6096F6} = {FBAA4B30-949D-11EB-B3DB-171EEE6096F6}
-		{68F3BDC0-949E-11EB-B3DB-171EEE6096F6} = {FBAA4B30-949D-11EB-B3DB-171EEE6096F6}
 		{5176D4D8-AE99-4F35-80CC-09875957EB2A} = {4B7D0440-949E-11EB-B3DB-171EEE6096F6}
 		{4B7D0440-949E-11EB-B3DB-171EEE6096F6} = {FBAA4B30-949D-11EB-B3DB-171EEE6096F6}
+		{68F3BDC0-949E-11EB-B3DB-171EEE6096F6} = {FBAA4B30-949D-11EB-B3DB-171EEE6096F6}
+		{6D59FE10-949E-11EB-B3DB-171EEE6096F6} = {FBAA4B30-949D-11EB-B3DB-171EEE6096F6}
+		{BD39D2A4-2383-4FB8-B606-86714D061CE1} = {6D59FE10-949E-11EB-B3DB-171EEE6096F6}
+		{85D5802E-E0F5-4634-B298-0CA4BD5DA709} = {6D59FE10-949E-11EB-B3DB-171EEE6096F6}
+		{7967E5B0-94AC-11EB-A7E4-3D6F3B65F12C} = {68F3BDC0-949E-11EB-B3DB-171EEE6096F6}
+		{86065E93-6C4B-4F38-A0CA-2A26583CAAEB} = {7967E5B0-94AC-11EB-A7E4-3D6F3B65F12C}
+		{92743111-659D-406F-AAA3-B2E13C861D5C} = {7967E5B0-94AC-11EB-A7E4-3D6F3B65F12C}
 		{0C0ABAA0-D703-4DC8-AA97-D23C56991AF1} = {68F3BDC0-949E-11EB-B3DB-171EEE6096F6}
 		{7B868B09-8AC4-4F77-B2D5-C812F036E4EA} = {0C0ABAA0-D703-4DC8-AA97-D23C56991AF1}
 		{057E875B-1205-4E59-9541-60D8EC46563F} = {0C0ABAA0-D703-4DC8-AA97-D23C56991AF1}
@@ -208,5 +266,13 @@ Global
 		{B894ABE6-19D8-4C80-9FD8-9A1A562A6D30} = {68F3BDC0-949E-11EB-B3DB-171EEE6096F6}
 		{FC22DB78-96C7-4B54-82DB-0AC0E4A038CE} = {B894ABE6-19D8-4C80-9FD8-9A1A562A6D30}
 		{F23B5B04-2D68-4BC5-A5D3-ABCF29D865E0} = {B894ABE6-19D8-4C80-9FD8-9A1A562A6D30}
+		{891AC844-7464-43F3-AD0B-454900C89E09} = {68F3BDC0-949E-11EB-B3DB-171EEE6096F6}
+		{364FAF38-298F-44D6-BD1D-D6AA2291A670} = {891AC844-7464-43F3-AD0B-454900C89E09}
+		{143FA774-FFF1-4B27-B989-6A821015BC6E} = {891AC844-7464-43F3-AD0B-454900C89E09}
+		{F4C42939-31E2-4C2E-BCDA-CA7A73CA4C52} = {891AC844-7464-43F3-AD0B-454900C89E09}
+		{7F2362C5-31AB-4865-BB37-D42C1B1F1987} = {891AC844-7464-43F3-AD0B-454900C89E09}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D249F7D-BF24-4972-B003-C338F8FDBABB}
 	EndGlobalSection
 EndGlobal
