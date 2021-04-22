@@ -8,4 +8,12 @@
     <ProjectReference Include="..\..\..\Shared\Confab.Shared.Abstractions\Confab.Shared.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Submissions\" />
+    <Folder Include="Submissions\Entities\" />
+    <Folder Include="Submissions\Exceptions\" />
+    <Folder Include="Submissions\Consts\" />
+    <Folder Include="Submissions\Events\" />
+    <Folder Include="Submissions\Repositories\" />
+  </ItemGroup>
 </Project>

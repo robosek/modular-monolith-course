@@ -1,76 +1,72 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using global::Confab.Modules.Conferences.Core.DTO;
+using global::Confab.Modules.Conferences.Core.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
 namespace Confab.Modules.Conferences.Api.Controllers
 {
-    using System.Collections.Generic;
-    using System.Threading.Tasks;
-    using global::Confab.Modules.Conferences.Core.DTO;
-    using global::Confab.Modules.Conferences.Core.Services;
-    using Microsoft.AspNetCore.Authorization;
-    using Microsoft.AspNetCore.Mvc;
-
-    namespace Confab.Modules.Conferences.Api.Controllers
+    [Authorize(Policy = Policy)]
+    internal class ConferencesController : BaseController
     {
-        [Authorize(Policy = Policy)]
-        internal class ConferencesController : BaseController
+        private readonly IConferenceService _conferenceService;
+        private const string Policy = "conferences";
+        public ConferencesController(IConferenceService conferenceService)
         {
-            private readonly IConferenceService _conferenceService;
-            private const string Policy = "conferences";
-            public ConferencesController(IConferenceService conferenceService)
-            {
-                _conferenceService = conferenceService;
-            }
+            _conferenceService = conferenceService;
+        }
 
-            [HttpGet("{id:guid}")]
-            [ActionName("GetAsync")]
-            [AllowAnonymous]
-            [ProducesResponseType(200)]
-            [ProducesResponseType(404)]
-            public async Task<ActionResult<ConferenceDetailsDto>> GetAsync(Guid id) =>
-                 OkOrNotFound(await _conferenceService.GetAsync(id));
+        [HttpGet("{id:guid}")]
+        [ActionName("GetAsync")]
+        [AllowAnonymous]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+        public async Task<ActionResult<ConferenceDetailsDto>> GetAsync(Guid id) =>
+             OkOrNotFound(await _conferenceService.GetAsync(id));
 
-            [HttpGet]
-            [AllowAnonymous]
-            [ProducesResponseType(200)]
-            public async Task<ActionResult<IReadOnlyList<ConferenceDto>>> BrowseAsync() =>
-                Ok(await _conferenceService.BrowseAsync());
+        [HttpGet]
+        [AllowAnonymous]
+        [ProducesResponseType(200)]
+        public async Task<ActionResult<IReadOnlyList<ConferenceDto>>> BrowseAsync() =>
+            Ok(await _conferenceService.BrowseAsync());
 
-            [HttpPost]
-            [ProducesResponseType(201)]
-            [ProducesResponseType(400)]
-            [ProducesResponseType(401)]
-            [ProducesResponseType(403)]
-            public async Task<ActionResult> AddAsync(ConferenceDto dto)
-            {
-                await _conferenceService.AddAsync(dto);
-                return CreatedAtAction(nameof(GetAsync), new { id = dto.Id }, null);
-            }
+        [HttpPost]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [ProducesResponseType(403)]
+        public async Task<ActionResult> AddAsync(ConferenceDto dto)
+        {
+            await _conferenceService.AddAsync(dto);
+            return CreatedAtAction(nameof(GetAsync), new { id = dto.Id }, null);
+        }
 
-            [HttpPut("{id:guid}")]
-            [ProducesResponseType(204)]
-            [ProducesResponseType(400)]
-            [ProducesResponseType(401)]
-            [ProducesResponseType(403)]
-            public async Task<ActionResult> UpdateAsync(Guid id, ConferenceDetailsDto dto)
-            {
-                dto.Id = id;
-                await _conferenceService.UpdateAsync(dto);
+        [HttpPut("{id:guid}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [ProducesResponseType(403)]
+        public async Task<ActionResult> UpdateAsync(Guid id, ConferenceDetailsDto dto)
+        {
+            dto.Id = id;
+            await _conferenceService.UpdateAsync(dto);
 
-                return NoContent();
-            }
+            return NoContent();
+        }
 
 
-            [HttpDelete("{id:guid}")]
-            [ProducesResponseType(204)]
-            [ProducesResponseType(400)]
-            [ProducesResponseType(401)]
-            [ProducesResponseType(403)]
-            public async Task<ActionResult> DeleteAsync(Guid id)
-            {
-                await _conferenceService.DeleteAsync(id);
+        [HttpDelete("{id:guid}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [ProducesResponseType(403)]
+        public async Task<ActionResult> DeleteAsync(Guid id)
+        {
+            await _conferenceService.DeleteAsync(id);
 
-                return NoContent();
-            }
+            return NoContent();
         }
     }
-
 }

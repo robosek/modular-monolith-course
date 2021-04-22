@@ -8,4 +8,7 @@
     <ProjectReference Include="..\Confab.Modules.Agendas.Infrastructure\Confab.Modules.Agendas.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
 </Project>

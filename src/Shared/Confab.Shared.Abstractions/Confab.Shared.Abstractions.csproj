@@ -19,5 +19,7 @@
     <Folder Include="Contexts\" />
     <Folder Include="Events\" />
     <Folder Include="Messaging\" />
+    <Folder Include="Kernel\" />
+    <Folder Include="Kernel\Types\" />
   </ItemGroup>
 </Project>
