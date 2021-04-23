@@ -8,4 +8,10 @@
     <ProjectReference Include="..\Confab.Modules.Agendas.Domain\Confab.Modules.Agendas.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Events\" />
+    <Folder Include="Events\Submission\" />
+    <Folder Include="Events\Submission\External\" />
+    <Folder Include="Events\Submission\External\Handlers\" />
+  </ItemGroup>
 </Project>
