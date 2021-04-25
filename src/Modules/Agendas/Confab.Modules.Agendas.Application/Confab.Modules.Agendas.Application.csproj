@@ -9,9 +9,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Events\" />
-    <Folder Include="Events\Submission\" />
-    <Folder Include="Events\Submission\External\" />
-    <Folder Include="Events\Submission\External\Handlers\" />
+    <Folder Include="Submissions\Events\" />
+    <Folder Include="Submissions\" />
+    <Folder Include="Submissions\Commands\" />
+    <Folder Include="Submissions\Exceptions\" />
+    <Folder Include="Submissions\Commands\Handlers\" />
+    <Folder Include="Submissions\Queries\" />
+    <Folder Include="Submissions\DTO\" />
   </ItemGroup>
 </Project>

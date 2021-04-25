@@ -49,7 +49,6 @@ namespace Confab.Modules.Agendas.Domain.Submissions.Entities
             string title,
             string description,
             int level,
-            string status,
             IEnumerable<string> tags,
             ICollection<Speaker> speakers)
         {

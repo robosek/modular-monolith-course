@@ -21,5 +21,7 @@
     <Folder Include="Messaging\" />
     <Folder Include="Kernel\" />
     <Folder Include="Kernel\Types\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Queries\" />
   </ItemGroup>
 </Project>
