@@ -17,6 +17,7 @@
       <Folder Include="Messaging\Dispatchers\" />
       <Folder Include="Commands\" />
       <Folder Include="Queries\" />
+      <Folder Include="Kernel\" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Humanizer" Version="2.8.26" />

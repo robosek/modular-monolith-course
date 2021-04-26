@@ -16,5 +16,7 @@
     <Folder Include="Submissions\Commands\Handlers\" />
     <Folder Include="Submissions\Queries\" />
     <Folder Include="Submissions\DTO\" />
+    <Folder Include="Submissions\Services\" />
+    <Folder Include="Submissions\Events\External\" />
   </ItemGroup>
 </Project>
