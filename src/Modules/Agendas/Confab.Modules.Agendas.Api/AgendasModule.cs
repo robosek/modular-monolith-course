@@ -1,5 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 using Confab.Modules.Agendas.Application;
+using Confab.Modules.Agendas.Domain;
 using Confab.Modules.Agendas.Infrastructure;
 using Confab.Shared.Abstractions.Modules;
 using Microsoft.AspNetCore.Builder;
@@ -19,9 +20,10 @@ namespace Confab.Modules.Agendas.Api
 
         public void Register(IServiceCollection serviceCollection, IConfiguration configuration = null)
          =>
-            serviceCollection.AddApplication()
+            serviceCollection
                              .AddApplication()
-                             .AddInfrastructure();
+                             .AddDomain()
+                             .AddInfrastructure(configuration);
                   
 
         public void Use(IApplicationBuilder app)

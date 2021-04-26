@@ -23,7 +23,7 @@ namespace Confab.Modules.Agendas.Application.Events.Submission.External.Handlers
             }
 
             var speaker = Speaker.Create(@event.Id, @event.FullName);
-            await speakerRepository.CreateAsync(speaker);
+            await speakerRepository.AddAsync(speaker);
         }
     }
 }
